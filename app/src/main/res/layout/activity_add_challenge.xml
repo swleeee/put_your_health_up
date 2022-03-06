@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" 챌린지 추가"
+        android:textColor="#000000"
+        android:textSize="30dp"/>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="420dp"
+        android:layout_height="5dp"
+        android:background="#018752" />
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".AddChallenge">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+
+        android:paddingLeft="15dp"
+        android:paddingEnd="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/et_recruit_startday"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/border_layout"
+            android:textSize="16dp"
+            android:ems="10"
+            android:hint="내용을 입력해주세요"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_challenge_goal" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="목표"
+            android:textSize="15dp"
+            android:textColor="#018752"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="모집시작일"
+            android:textSize="15dp"
+            android:textColor="#018752"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="모집마감일"
+            android:textSize="15dp"
+            android:textColor="#018752"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="챌린지 기간"
+            android:textSize="15dp"
+            android:textColor="#018752"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="금액"
+            android:textSize="15dp"
+            android:textColor="#018752"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="구성내용"
+            android:textColor="#018752"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <EditText
+            android:id="@+id/et_challenge_goal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/border_layout"
+            android:ems="10"
+            android:hint=" 내용을 입력해주세요"
+            android:inputType="textPersonName"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_recruit_due"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/border_layout"
+            android:ems="10"
+            android:textSize="16dp"
+            android:hint="내용을 입력해주세요"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_recruit_startday" />
+
+
+        <EditText
+            android:id="@+id/et_challenge_period"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/border_layout"
+            android:ems="10"
+            android:textSize="16dp"
+            android:hint="내용을 입력해주세요"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_recruit_due" />
+
+        <EditText
+            android:id="@+id/et_challenge_money"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/border_layout"
+            android:ems="10"
+            android:textSize="16dp"
+            android:hint="내용을 입력해주세요"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_challenge_period" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginBottom="24dp"
+            android:background="#104123"
+            android:textColor="#FFFFFF"
+            android:text="등록"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_challenge_exercise_todo" />
+
+        <RadioGroup
+            android:id="@+id/rd_challenge_category"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+            <RadioButton
+                android:id="@+id/rd_challenge_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:checked="true"
+                android:text="식단"
+                tools:layout_editor_absoluteX="193dp"
+                tools:layout_editor_absoluteY="431dp" />
+
+            <RadioButton
+                android:id="@+id/rd_challenge_exercise"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="운동"
+                tools:layout_editor_absoluteX="251dp"
+                tools:layout_editor_absoluteY="431dp" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/et_input_calory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border_layout"
+            android:hint="하루 섭취할 칼로리 입력(ex : 2400)"
+            android:visibility="invisible"
+            android:textSize="16dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/rv_challenge_exercise_todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_exercise_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/rv_challenge_exercise_todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="invisible">
+
+
+            <Spinner
+                android:id="@+id/sp_challenge_exercise_category"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_weight="3"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/btn_add_challenge_exercise_todo"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="2"
+                android:background="#FFFFFF"
+                android:src="@drawable/add_circle_2x"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_challenge_exercise_todo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="95dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rd_challenge_category" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</LinearLayout>

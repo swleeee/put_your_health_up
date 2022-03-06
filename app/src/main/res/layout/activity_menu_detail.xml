@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context=".MenuDetailActivity">
+
+    <TextView
+        android:id="@+id/tv_menu_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#111111"
+        android:textSize="36dp"
+        android:text="메뉴 상세 정보"
+        android:layout_weight="0.5"
+        android:layout_gravity="center_horizontal"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="92dp" />
+
+    <TextView
+        android:id="@+id/tv_menu_detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_weight="0.5"
+        android:layout_gravity="center_horizontal"
+        android:text="메뉴이름"
+
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="158dp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="241dp">
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_quantity_count"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:text="+/-"-->
+<!--                android:textColor="#111111"-->
+<!--                android:textSize="16dp"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/et_quantity_count"-->
+<!--                app:layout_constraintHorizontal_bias="0.728"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_quantity_type"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:layout_marginEnd="36dp"-->
+<!--                android:text="양"-->
+<!--                android:textColor="#111111"-->
+<!--                android:textSize="16dp"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/sp_quantity"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_quantity_count"-->
+<!--                android:layout_width="93dp"-->
+<!--                android:layout_height="44dp"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:layout_marginEnd="44dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPersonName"-->
+<!--                android:text="Name"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/tv_quantity_type"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <Spinner-->
+<!--                android:id="@+id/sp_quantity"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:layout_marginEnd="52dp"-->
+<!--                android:background="#FFFFFF"-->
+<!--                android:spinnerMode="dropdown"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_cancel_update_menu_information"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="64dp"-->
+<!--                android:layout_marginTop="92dp"-->
+<!--                android:text="취소"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/btn_save_update_menu_information"-->
+<!--                app:layout_constraintHorizontal_bias="0.484"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tv_quantity_count" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_save_update_menu_information"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="120dp"-->
+<!--                android:text="저장"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/sp_quantity"-->
+<!--                app:layout_constraintVertical_bias="0.585" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_menu_detail_calory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="칼로리"
+        android:textColor="#111111"
+        android:textSize="16dp"
+        android:layout_weight="0.5"
+        android:layout_gravity="center_horizontal"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="240dp" />
+
+    <TextView
+        android:id="@+id/tv_menu_detail_carbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="탄수화물"
+        android:textColor="#111111"
+        android:textSize="16dp"
+        android:layout_weight="0.5"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="318dp" />
+
+    <TextView
+        android:id="@+id/tv_menu_detail_protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="단백질"
+        android:textColor="#111111"
+        android:textSize="16dp"
+        android:layout_weight="0.5"
+        android:layout_gravity="center_horizontal"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="408dp" />
+
+    <TextView
+        android:id="@+id/tv_menu_detail_fat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="지방"
+        android:textColor="#111111"
+        android:textSize="16dp"
+        android:layout_weight="0.5"
+        android:layout_gravity="center_horizontal"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="469dp" />
+
+    <TextView
+        android:id="@+id/tv_menu_detail_vitamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="비타민"
+        android:textColor="#111111"
+        android:textSize="16dp"
+        android:layout_weight="0.5"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="519dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0B7149"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:src="@drawable/splash_icon3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"/>
+
+    <TextView
+        android:text="푸쳐헬썹"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/iv_img"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

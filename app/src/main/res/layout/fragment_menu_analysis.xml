@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.MenuAnalysis">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="식단 분석"
+            android:textSize="30dp"
+            android:textColor="#111111"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/txt_today"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="11월 28일"
+            android:textColor="#111111"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageButton
+            android:id="@+id/img_calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calender"
+            android:layout_weight="1"
+            android:background="#FFFFFF"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="420dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="48dp"
+        android:background="#018752" />
+
+    <!--    <ScrollView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center_vertical"-->
+    <!--        android:layout_marginTop="40dp"-->
+    <!--        android:layout_marginLeft="5dp"-->
+    <!--        android:id="@+id/day_sv">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:layout_marginTop="60dp"-->
+    <!--            android:layout_marginLeft="3dp">-->
+
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:id="@+id/cardView"-->
+
+    <!--            android:layout_width="384dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="0dp"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:layout_marginBottom="8dp"-->
+
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+
+    <!--            app:cardCornerRadius="4dp"-->
+    <!--            app:cardElevation="8dp">-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_title_temp"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginLeft="3dp"-->
+    <!--                android:layout_marginBottom="25dp"-->
+    <!--                android:text="아침"-->
+    <!--                android:textSize="26dp"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+
+    <!--                app:layout_constraintHorizontal_bias="0.091"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintVertical_chainStyle="packed" />-->
+
+    <!--            <ImageButton-->
+    <!--                android:id="@+id/btn_add_menu_temp"-->
+    <!--                android:layout_width="50dp"-->
+    <!--                android:layout_height="50dp"-->
+
+    <!--                android:layout_marginTop="16dp"-->
+    <!--                android:layout_marginRight="16dp"-->
+    <!--                android:layout_marginBottom="16dp"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent"-->
+    <!--                android:background="#FFFFFF"/>-->
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--        </androidx.cardview.widget.CardView>-->
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:id="@+id/cardView2"-->
+
+    <!--            android:layout_width="384dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="0dp"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:layout_marginBottom="8dp"-->
+
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+
+    <!--            app:cardCornerRadius="4dp"-->
+    <!--            app:cardElevation="8dp">-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_title_temp2"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginLeft="3dp"-->
+    <!--                android:layout_marginBottom="25dp"-->
+    <!--                android:text="점심"-->
+    <!--                android:textSize="26dp"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+
+    <!--                app:layout_constraintHorizontal_bias="0.091"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintVertical_chainStyle="packed" />-->
+
+    <!--            <ImageButton-->
+    <!--                android:id="@+id/btn_add_menu_temp2"-->
+    <!--                android:layout_width="50dp"-->
+    <!--                android:layout_height="50dp"-->
+
+    <!--                android:layout_marginTop="16dp"-->
+    <!--                android:layout_marginRight="16dp"-->
+    <!--                android:layout_marginBottom="16dp"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent"-->
+    <!--                android:background="#FFFFFF"/>-->
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--    </androidx.cardview.widget.CardView>-->
+
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:id="@+id/cardView3"-->
+
+    <!--            android:layout_width="384dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="0dp"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:layout_marginBottom="8dp"-->
+
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+
+    <!--            app:cardCornerRadius="4dp"-->
+    <!--            app:cardElevation="8dp">-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_title_temp3"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="3dp"-->
+    <!--            android:layout_marginBottom="25dp"-->
+    <!--            android:text="저녁"-->
+    <!--            android:textSize="26dp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+
+    <!--            app:layout_constraintHorizontal_bias="0.091"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintVertical_chainStyle="packed" />-->
+
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/btn_add_menu_temp3"-->
+    <!--            android:layout_width="50dp"-->
+    <!--            android:layout_height="50dp"-->
+
+    <!--            android:layout_marginTop="16dp"-->
+    <!--            android:layout_marginRight="16dp"-->
+    <!--            android:layout_marginBottom="16dp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            android:background="#FFFFFF"/>-->
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--</androidx.cardview.widget.CardView>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="8dp" >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView4"-->
+    <!--        android:layout_width="372dp"-->
+    <!--        android:layout_height="253dp"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:layout_marginTop="395dp"-->
+    <!--        android:src="@android:drawable/editbox_background" />-->
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="445dp"
+        android:text="요약"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:textColor="#000000"
+        android:layout_marginTop="480dp"
+        android:text="칼로리 :" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:textColor="#000000"
+        android:layout_marginTop="480dp"
+        android:text="단백질 :" />
+
+    <TextView
+        android:id="@+id/text_dan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="480dp" />
+
+    <TextView
+        android:id="@+id/text_cal"
+        android:layout_width="wrap_content"
+        android:textColor="#000000"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="480dp" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+
+        android:textColor="#000000"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="520dp"
+        android:text="탄수화물 :" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="520dp"
+        android:text="비타민 :" />
+
+    <TextView
+        android:id="@+id/text_vi"
+        android:layout_width="wrap_content"
+        android:textColor="#000000"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="520dp" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:textColor="#000000"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="560dp"
+        android:text="지방 :" />
+
+    <TextView
+        android:id="@+id/text_ji"
+        android:layout_width="wrap_content"
+        android:textColor="#000000"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="560dp" />
+
+    <TextView
+        android:id="@+id/text_tan"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="520dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="340dp"
+        android:layout_height="5dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="440dp"
+        android:background="#018752" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="5dp"
+        android:layout_height="152dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="440dp"
+        android:background="#018752" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="5dp"
+        android:layout_height="152dp"
+        android:layout_marginLeft="341dp"
+        android:layout_marginTop="440dp"
+        android:background="#018752" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="340dp"
+        android:layout_height="5dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="590dp"
+        android:background="#018752" />
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/day_rv"-->
+    <!--        android:layout_width="427dp"-->
+    <!--        android:layout_height="550dp"-->
+    <!--        android:layout_marginStart="0dp"-->
+    <!--        android:layout_marginTop="52dp"-->
+    <!--        android:layout_marginEnd="0dp"-->
+    <!--        android:layout_marginBottom="8dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        </LinearLayout>-->
+    <!--    </ScrollView>-->
+
+
+
+</FrameLayout>

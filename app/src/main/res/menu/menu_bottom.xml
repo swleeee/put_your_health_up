@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_foodAnalysis"
+        android:title="식단분석"
+        android:icon="@drawable/menu_analysis_2x"/>
+    <item
+        android:id="@+id/nav_postureCorrection"
+        android:title="자세교정"
+        android:icon="@drawable/postural_correction_2x"/>
+    <item
+        android:id="@+id/nav_challenge"
+        android:title="챌린지"
+        android:icon="@drawable/challenge"/>
+
+    <item
+        android:id="@+id/nav_mypage"
+        android:title="마이페이지"
+        android:icon="@drawable/mypage_2x"/>
+</menu>

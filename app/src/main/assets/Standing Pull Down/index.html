@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AI Fitness Trainer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<title>AI Fitness Trainer</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- <div class="container mt-5">
+        <div class="frame"> -->
+            <div class="center mt-5">
+                <div class="headline">
+                    <div class="small">Standing Pull Down</div>
+<!--                    Counter-->
+                </div>
+<!--                <div class="circle-big">-->
+<!--                    <div class="text">-->
+<!--                        <span id="counter">0</span><div class="small">개</div>-->
+<!--                    </div>-->
+<!--                    <svg>-->
+<!--                        <circle class="bg" cx="57" cy="57" r="52" />-->
+<!--                        <circle class="progress" cx="57" cy="57" r="52" />-->
+<!--                    </svg>-->
+<!--                </div>-->
+            <!-- </div>
+        </div> -->
+        <!-- <h1>인공지능(AI) Fitness Trainer</h1>
+        <button class="btn btn-primary"type="button" onclick="init()">Start</button> -->
+        <div><canvas id="canvas"></canvas></div>
+        <div id="label-container"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+<script type="text/javascript">
+
+    document.addEventListener("DOMContentLoaded", init);
+    
+    const URL = "./my_model/";
+    let model, webcam, ctx, labelContainer, maxPredictions;
+
+    async function init() {
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
+
+
+        model = await tmPose.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+
+
+        const size = 650;
+        const flip = true;
+        webcam = new tmPose.Webcam(size, size, flip);
+        await webcam.setup();
+        await webcam.play();
+        window.requestAnimationFrame(loop);
+
+
+        const canvas = document.getElementById("canvas");
+        canvas.width = size; canvas.height = size;
+        ctx = canvas.getContext("2d");
+        labelContainer = document.getElementById("label-container");
+        for (let i = 0; i < maxPredictions; i++) {
+           labelContainer.appendChild(document.createElement("div"));
+        }
+    }
+
+    async function loop(timestamp) {
+        webcam.update();
+        await predict();
+        window.requestAnimationFrame(loop);
+    }
+
+    var status = "beginning"
+    var count = 0
+    async function predict() {
+
+        const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
+
+        const prediction = await model.predict(posenetOutput);
+
+        if (prediction[0].probability.toFixed(2) > 0.90) {
+            if (status == "pull_down") {
+                count++
+                window.android.callAndroid(count);
+            }
+            status = "beginning"
+        } else if (prediction[1].probability.toFixed(2) == 1.00) {
+            status = "pull_down"
+        } else if (prediction[2].probability.toFixed(2) == 1.00) {
+            status = "error"
+        }
+
+      //  for (let i = 0; i < maxPredictions; i++) {
+       //     const classPrediction =
+        //        prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+         //   labelContainer.childNodes[i].innerHTML = classPrediction;
+      //  }
+
+
+        drawPose(pose);
+    }
+
+    function drawPose(pose) {
+        if (webcam.canvas) {
+            ctx.drawImage(webcam.canvas, 0, 0);
+
+            if (pose) {
+                const minPartConfidence = 0.5;
+                tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);
+                tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
+            }
+        }
+    }
+</script>
+</body>
+</html>

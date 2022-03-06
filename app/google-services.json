@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "438883527166",
+    "project_id": "food-481b6",
+    "storage_bucket": "food-481b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438883527166:android:826e056eb6f9247ab978af",
+        "android_client_info": {
+          "package_name": "com.example.healthcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438883527166-c16378aftpbhgcdtnof3u7munlodf3kh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyviq21fEGJOnsudBupCxqqeiL41cu8nU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438883527166-c16378aftpbhgcdtnof3u7munlodf3kh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

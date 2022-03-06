@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GuideActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp">
+
+        <!--        <VideoView-->
+        <!--            android:id="@+id/vv_guide"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_gravity="center"/>-->
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/vv_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/tv_guide"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sp_selcnt"
+            android:text="운동설명"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"/>
+
+        <Spinner
+            android:id="@+id/sp_selcnt"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="60dp"
+            android:spinnerMode="dropdown"
+            android:background="#F3F0F0"/>
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="시작"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/sp_selcnt"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_shape"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
